@@ -9,14 +9,14 @@ class Shared implements Renderable
     /**
      * @var array
      */
-    protected $data = [];
+    protected array $data = [];
 
     /**
      * @param array $data
      *
-     * @return self
+     * @return $this
      */
-    public function run(array $data = []): self
+    public function run(array $data = []): Shared
     {
         $this->data = $data;
 
@@ -28,7 +28,7 @@ class Shared implements Renderable
      */
     public function render(): string
     {
-        return '<script>window.config=' . $this->generate() . ';</script>';
+        return "<script>window.config = {$this->generate()};</script>";
     }
 
     /**

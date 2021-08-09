@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\Facade;
  *
  * @method static \iAxel\Shared\Shared run(array $data = [])
  *
- * @method static string generate()
  * @method static string render()
+ *
+ * @mixin Facade
  */
 class Shared extends Facade
 {

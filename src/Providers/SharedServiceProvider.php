@@ -3,8 +3,11 @@
 namespace iAxel\Shared\Providers;
 
 use iAxel\Shared\Shared;
+
 use Illuminate\Support\Facades\Blade;
+
 use Illuminate\Support\ServiceProvider;
+
 use Illuminate\Contracts\Support\DeferrableProvider;
 
 class SharedServiceProvider extends ServiceProvider implements DeferrableProvider
@@ -25,7 +28,7 @@ class SharedServiceProvider extends ServiceProvider implements DeferrableProvide
     public function register(): void
     {
         $this->app->singleton(Shared::class, function () {
-            return new Shared;
+            return new Shared();
         });
     }
 
